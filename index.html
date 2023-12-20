@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="public/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/img/favicon-16x16.png">
+    <link rel="manifest" href="public/img/site.webmanifest">
+    <link rel="mask-icon" href="public/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Caitlyn's 17th Birthday Party</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+        <audio id="myAudio" autoplay loop>
+        <source src="public/audio/bgsound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="audioControl" onclick="toggleAudio()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><path d="M533.6 32.5c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C557.5 113.8 592 180.8 592 256s-34.5 142.2-88.7 186.3c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5C598.5 426.8 640 346.2 640 256s-41.5-170.8-106.4-223.5zM473.1 107c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C475.3 170.7 496 210.9 496 256s-20.7 85.3-53.2 111.8c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5c43.2-35.2 70.9-88.9 70.9-149s-27.7-113.8-70.9-149zm-60.5 74.5c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C393.1 227.6 400 241 400 256s-6.9 28.4-17.7 37.3c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5C434.1 312.9 448 286.1 448 256s-13.9-56.9-35.4-74.5zM159.9 201.9L272 102.3V409.7L159.9 310.1c-4.4-3.9-10.1-6.1-15.9-6.1H56c-4.4 0-8-3.6-8-8V216c0-4.4 3.6-8 8-8h88c5.9 0 11.6-2.2 15.9-6.1zM290.2 32c-7.3 0-14.3 2.7-19.8 7.5L134.9 160H56c-30.9 0-56 25.1-56 56v80c0 30.9 25.1 56 56 56h78.9L270.4 472.5c5.5 4.8 12.5 7.5 19.8 7.5c16.5 0 29.8-13.3 29.8-29.8V61.8C320 45.3 306.7 32 290.2 32z"/></svg>
+    </div>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top px-3">
+        <a class="navbar-brand" href="#">
+            <img src="public/img/hello_1.webp" alt="caitlyn Logo" width="100" height="45">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto navbar-nav-scroll" style="--bs-scroll-height: 120px;">
+                <li class="nav-item px-4">
+                    <a class="nav-link text-light" href="#profilebg">Profile</a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link text-light" href="#thedate">The Day</a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link text-light" href="#venue">Venue</a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link text-light" href="#attire">Dresscode</a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link text-light" href="#gallery">Gallery</a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link text-light" href="#rsvp">Wishes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="bg bg-1">
+        <section id="jumbo">
+            <img src="public/img/welcome.webp" alt="lets party" class="img-fluid main-image welcome">
+            <!-- <img src="slide_1/welcome_pc.webp" alt="lets party" class="img-fluid main-image welcome ds-com"> -->
+        </section>
+    </div>
+    <div class="bg bg-2" id="profilebg">
+        <section id="profile">
+            <img src="public/img/hello_1.webp" alt="invitation title" class="img-fluid"> 
+            <img src="public/img/hello_2.webp" alt="invitation" class="img-fluid inv-txt"> 
+        </section>
+    </div>
+    <div class="bg bg-3">
+        <section id="thedate">
+            <img src="public/img/date_1.webp" alt="date title" class="img-fluid">
+            <div class="py-3"></div>
+            <div class="px-3">
+                <img src="public/img/date_2.webp" alt="date" class="img-fluid px-4" style="margin-top: -20px;">
+            </div>
+            <!-- <img src="slide_3/date_2_pc.webp" alt="date" class="img-fluid px-3 ds-com" style="margin-top: -20px;"> -->
+            <div class="row timer d-flex justify-content-center">
+                <div class="col-4 me-1" id="day">00</div>
+                <div class="col-4 mx-3" id="hrs">00</div>
+                <div class="col-4 ms-1" id="min">00</div>
+            </div>
+        </section>
+    </div>
+    <div class="bg bg-4">
+        <section id="venue">
+            
+            <img src="public/img/venue_1.webp" alt="venue title" class="img-fluid">
+            <div class="text-center"> <a href="https://maps.app.goo.gl/GqeNCQBFPYSDUTJ89"><img src="public/img/venue_2.webp" alt="venue map" class="img-fluid map"></a></div>
+            <div class="divider-1"></div>
+            <img src="public/img/venue_3.webp" alt="venue place" class="img-fluid">
+        </section>
+    </div>
+    <div class="bg bg-5">
+        <section id="attire">
+            <img src="public/img/attire_1.webp" alt="attire title" class="img-fluid px-5">
+            <div class="divider-2"></div>
+            <div class="px-md-5">
+                <img src="public/img/attire_2.webp" alt="attire color" class="img-fluid px-2 px-md-5 dc-color">
+            </div>
+        </section>
+    </div>
+    <div class="bg bg-6">
+        <section id="gallery">
+            <img src="public/img/gallery_1.webp" alt="gallery title" class="img-fluid px-5">
+            <div class="py-2"></div>
+            <img src="public/img/gallery_pic1.webp" alt="gallery img 1" class="img-fluid big-img" data-bs-toggle="modal" data-bs-target="#myModal" onclick="act1()">
+            <!-- <div class="divider-3"></div> -->
+            <img src="public/img/gallery_pic2.webp" alt="gallery img 2" class="img-fluid sm-img" data-bs-toggle="modal" data-bs-target="#myModal" onclick="act2()">
+            <img src="public/img/gallery_pic3.webp" alt="gallery img 3" class="img-fluid sm-img" data-bs-toggle="modal" data-bs-target="#myModal" onclick="act3()">
+            <img src="public/img/gallery_pic4.webp" alt="gallery img 4" class="img-fluid sm-img" data-bs-toggle="modal" data-bs-target="#myModal" onclick="act4()">
+            <img src="public/img/gallery_pic5.webp" alt="gallery img 5" class="img-fluid sm-img" data-bs-toggle="modal" data-bs-target="#myModal" onclick="act5()">
+            <div class="px-md-5">
+                <img src="public/img/gallery_2.webp" alt="rules" class="img-fluid px-5 pt-3 pt-md-0">
+            </div>
+        </section>
+    </div>
+    <div class="bg bg-7">
+        <section id="rsvp">
+            <div class="px-4">
+            <div class="px-2">
+                <img src="public/img/wish_1.webp" alt="invitation" class="img-fluid px-3">
+            </div>
+            <div class="divider-4"></div>
+        <form action="https://caitlyn17birthdayparty.vinchenamigo.com" method="post" class="wish-form">
+            <input type="hidden" name="_token" value="sYoeXToY33KOqeovNiTanC89spHvjPC7mmYF6TeU" autocomplete="off">      
+            <label for="sender" class="text-start">Nama:</label>
+            <input type="text" name="sender" id="sender" class="shdow" required>
+            
+            <label for="wish" class="text-start">Wish:</label>
+            <textarea name="wish" id="wish" rows="2" class="shadow" required></textarea>
+    
+            <button type="submit" class="shadow">Submit</button>
+        </form>
+        <div class="px-4">
+            <div class="wish-list px-4">
+                            <div class="wish-item">
+                    zefanya<br>
+                    hbd to youu
+                </div>
+                            <div class="wish-item">
+                    ani<br>
+                    aaa
+                </div>
+                            <div class="wish-item">
+                    nia<br>
+                    wow
+                </div>
+                            <div class="wish-item">
+                    vincent<br>
+                    tes
+                </div>
+                            <div class="wish-item">
+                    Tabita<br>
+                    Habede to you
+                </div>
+                            <div class="wish-item">
+                    Caitlyn<br>
+                    Hbd
+                </div>
+                            <div class="wish-item">
+                    Sherine<br>
+                    Happy Birthday Caitlyn❕
+Semoga cepet dapet pacar 🤞🏻🤞🏻
+                </div>
+                            <div class="wish-item">
+                    leticia<br>
+                    kiw
+                </div>
+                            <div class="wish-item">
+                    Ding ding acumalaka<br>
+                    anjay gurinjayhabede mamen
+                </div>
+                            <div class="wish-item">
+                    Jowan<br>
+                    Habede syg 🤟🏻🤩
+                </div>
+                            <div class="wish-item">
+                    Ok<br>
+                    Wish you all the best
+                </div>
+                            <div class="wish-item">
+                    Matthew<br>
+                    dapet pacar, soalnya sudah juara mulu
+                </div>
+                            <div class="wish-item">
+                    pungpung<br>
+                    Semoga cepet jadi sama yg itu ya😋
+                </div>
+                            <div class="wish-item">
+                    Michella Irawan<br>
+                    Happy Birthdayy cee, wish u all the bestt 🤍
+                </div>
+                            <div class="wish-item">
+                    Ronaldo<br>
+                    HSS ka Caitlyn wuatb gbu
+                </div>
+                            <div class="wish-item">
+                    Ronaldo<br>
+                    HSS ka Caitlyn wuatb gbu
+                </div>
+                            <div class="wish-item">
+                    Gloria<br>
+                    acikiwir hbd hbd kaaakkkk🦹🏻‍♂️🦹🏻‍♂️🦹🏻‍♂️🦹🏻‍♂️🦹🏻‍♂️
+                </div>
+                            <div class="wish-item">
+                    Angie<br>
+                    Happy Birthday!!! Semoga sehat selalu, tambah pinter, semua keinginan tercapaiii✨🦋
+                </div>
+                            <div class="wish-item">
+                    Fio<br>
+                    CAITLYYNNNN semogaa tidak acumalaka dan sukses lahir batin yaaa 🌊😍
+                </div>
+                            <div class="wish-item">
+                    Kezia<br>
+                    Happy birthdayy Caitlyn!! Semoga panjang umur sehat selaluu 💗 
+Kejar cita-cita mu setinggi langitt ☁️ dan semoga happy selamanya 😸🫶🏻
+                </div>
+                            <div class="wish-item">
+                    Vica<br>
+                    Cantikk
+                </div>
+                            <div class="wish-item">
+                    Edo<br>
+                    Hbd Caitlyn, apakah dengan levelmu yang....? Semoga di umur yang ke 17 ini semua harapanmu terkabulkan
+                </div>
+                            <div class="wish-item">
+                    Krisna Waluyo<br>
+                    Habede bang. Amin ketos 2024-2025
+                </div>
+                            <div class="wish-item">
+                    Kyla<br>
+                    Happy birthday caitlyn! semoga yang disemogakan tersemogakan 🙌🏻
+                </div>
+                            <div class="wish-item">
+                    Marcello Gilbert<br>
+                    Semoga stiker WA nya makin banyak
+                </div>
+                            <div class="wish-item">
+                    vioo<br>
+                    Happy birthday cantikk!! semangat terus yaaa, wish uu all the best ajahh🥰
+                </div>
+                            <div class="wish-item">
+                    Itoo<br>
+                    Happy Birthday Ce Caitlyn🤩🤩🤩
+                </div>
+                            <div class="wish-item">
+                    Pat<br>
+                    HBD CE!! Semoga sehat selalu, panjang umur, dan semua yang dikerjakan berhasil. AMIIIN
+                </div>
+                            <div class="wish-item">
+                    Pat<br>
+                    HBD CE!! Semoga sehat selalu, panjang umur, dan semua yang dikerjakan berhasil. AMIIIN
+                </div>
+                            <div class="wish-item">
+                    leia<br>
+                    aci kiwir kiw wuatb
+                </div>
+                            <div class="wish-item">
+                    Jojo<br>
+                    Happy sweet seventeen mak nya hiro!!
+                </div>
+                            <div class="wish-item">
+                    kyoko<br>
+                    happy birthday caitlyn!!! sehat-sehat terus ya cait love youuuu !!
+                </div>
+                            <div class="wish-item">
+                    Aurella<br>
+                    Hi caitlyn!!! Happy sweet seventeen yaa..semoga cepet dapet cowo hihi, God bless!
+                </div>
+                            <div class="wish-item">
+                    Vincent<br>
+                    Hbd ket
+                </div>
+                            <div class="wish-item">
+                    Auryn<br>
+                    Happy birthday caitlynnn
+                </div>
+                            <div class="wish-item">
+                    Caca<br>
+                    SEMUA YANG DIINGININ SAMA CAITLYN TERKABULLL 🤯🤯🤯 LYSM CAITTT &lt;333
+                </div>
+                            <div class="wish-item">
+                    Diel<br>
+                    Hbd cait, panjang umur, dan sehat selalu🥳🥳
+                </div>
+                            <div class="wish-item">
+                    greis<br>
+                    Happy birthday Caitlynn!!
+                </div>
+                            <div class="wish-item">
+                    J.KO<br>
+                    Happy Birthday Caitlyn,WUATB n GBU
+                </div>
+                            <div class="wish-item">
+                    Melanie<br>
+                    Happy Birthday Caitlyn… Wishing you a birthday filled with joy, love, and happiness. Wish you all the best… God bless you abundantly. ❤️❤️🙏🙏
+                </div>
+                            <div class="wish-item">
+                    Ryu gf<br>
+                    Happy Birthday Caittttt, love u
+                </div>
+                            <div class="wish-item">
+                    Benia<br>
+                    Happy Birthdayy, Caitlynnn🤩 Wish you a belated birthday. Wish you all the best and God bless U✨
+                </div>
+                            <div class="wish-item">
+                    Terra<br>
+                    HBD To you, Wish you all the best
+                </div>
+                            <div class="wish-item">
+                    Dimas<br>
+                    HBD Caitlynnnn WUATB
+                </div>
+                            <div class="wish-item">
+                    Petrick<br>
+                    Hbd Caitlyn
+                </div>
+                            <div class="wish-item">
+                    JEEM<br>
+                    &quot;Selamat ulang tahun, semoga besok ulang tahun lagi.&quot;
+                </div>
+                            <div class="wish-item">
+                    Nael<br>
+                    Hbd cntik
+                </div>
+                            <div class="wish-item">
+                    Stephanus &amp; Karina<br>
+                    Happy Birthday Caitlyn, best wishes ❤️❤️
+                </div>
+                            <div class="wish-item">
+                    Yucca<br>
+                    hepi besdey maminya hiro! 🥳💐✨️ semoga panjang umur, sehat selalu, selalu jadi kebangaan mama papa, apa yang dicita-citakan bisa tercapai, cepet dapet cowo sama semoga hidupnya tidak acumalaka. 
+best wishes buat cecee ter-debesttt! 🫶🏻
+                </div>
+                            <div class="wish-item">
+                    celine<br>
+                    happy birthday caitt!! aku hadirnya online yah 😭 kado nya nyusul ☝️ panjang umur, sehat selalu, wuatb &amp; gbuu catt! ♡
+                </div>
+                            <div class="wish-item">
+                    Jeany widjaja<br>
+                    Wish you all the best
+                </div>
+                            <div class="wish-item">
+                    Kenneth<br>
+                    HSS Caitlyn Wish U All the Best &amp; God Bless U🎉
+                </div>
+                            <div class="wish-item">
+                    Bu Rib<br>
+                    HBD Nak cantik, bahagia selalu
+                </div>
+                            <div class="wish-item">
+                    Daniel<br>
+                    hss ya cait, wish u all the best in ur legal!
+                </div>
+                            <div class="wish-item">
+                    chrysant<br>
+                    happiest birthday caitt!! wish u nothing but the best🫶🏻
+                </div>
+                            <div class="wish-item">
+                    karina<br>
+                    ketlinnn, hss bgt!!
+                </div>
+                            <div class="wish-item">
+                    Benedict<br>
+                    HSS Citlynn.. wish u all the best!!!
+                </div>
+                            <div class="wish-item">
+                    Ashley<br>
+                    Happy b&#039;dayy caitlyn 💞  wish you all the bestt and GBU🤍
+                </div>
+                            <div class="wish-item">
+                    Darren<br>
+                    Happy birthday catt
+                </div>
+                            <div class="wish-item">
+                    Yemimaa<br>
+                    Happy birthday kak Caitlyn!!
+Wish u all the besttt
+                </div>
+                            <div class="wish-item">
+                    phyaa<br>
+                    hi cece cait!! 
+hearty congratulation for your successful completion of another journey round the sun, happy level up cece! 🤍 GBU!
+                </div>
+                            <div class="wish-item">
+                    kezi<br>
+                    happy birthday caitt! wish u all the best 🫶
+                </div>
+                            <div class="wish-item">
+                    devinaa<br>
+                    happyyy birthdayy caitt
+                </div>
+                            <div class="wish-item">
+                    Dinda<br>
+                    Happy b&#039;day ce caitlyn!! Wishing you all the best on your 17&#039;th birthday 🤍 GBU!!
+                </div>
+                            <div class="wish-item">
+                    Deoo<br>
+                    HBD kak Cait!!! , GBU....
+                </div>
+                            <div class="wish-item">
+                    adika<br>
+                    hbd kak caitlyn acumalaka fans masbro!!
+                </div>
+                            <div class="wish-item">
+                    angell<br>
+                    happy birthday cait!!🫶🏻 god bless you caketos andalanku‼️
+                </div>
+                            <div class="wish-item">
+                    jeje<br>
+                    happy sweet 17th caittt!!! GBU WUATB
+                </div>
+                            <div class="wish-item">
+                    Bonny<br>
+                    Semoga ketlin sehat selalu apapun pokoknya yang terbaik
+                </div>
+                            <div class="wish-item">
+                    orca kecil<br>
+                    Happy birthday orca besar, makasi sudah jadi partner yang keren poll, sukses teruss 🤩
+                </div>
+                            <div class="wish-item">
+                    Yosefinnnnnnnn<br>
+                    Hbd boz besar calon ketos😍
+                </div>
+                            <div class="wish-item">
+                    Oma Hok &amp; Opa Liang<br>
+                    Happy Birthday Cathleen, panjang umur, sehat selalu, jadi kebanggaan mama dan papa, Jesus Bless U!
+                </div>
+                            <div class="wish-item">
+                    Iyan<br>
+                    HSS ketlinn cantikk!😚, wishnya semoga di umur 17th yang disemogakan tersemogakan😉🤭
+                </div>
+                            <div class="wish-item">
+                    Shanty<br>
+                    Happy bday Caitlyn..
+                </div>
+                            <div class="wish-item">
+                    Christin<br>
+                    Wish you all the best 🥰 God Bless you always..
+                </div>
+                            <div class="wish-item">
+                    ivone<br>
+                    Happy Birthdayy..semoga di masa remaja ini, semakin dewasa, sayang pama, dan selalu menjadi anak Tuhan yang baik ,GBU
+                </div>
+                            <div class="wish-item">
+                    Kay<br>
+                    Happy bday Caitlyn....wish u all the best
+                </div>
+                            <div class="wish-item">
+                    HMVE<br>
+                    Semoga semua yg terbaek dilimpahkan buatmu Caith..😘😘
+                </div>
+                            <div class="wish-item">
+                    Zenterra&#039;s mom<br>
+                    Selamat ulang tahun, cantik. Semoga sukses dengan segala cita2 dan selalu bahagia dalam penyertaan Tuhan.
+                </div>
+                        </div>
+        </div>
+
+        
+            </div>
+        </section>
+        <section id="thanks">
+            <div class="px-2 mt-4">
+                <img src="public/img/wish_2.webp" alt="invitation" class="img-fluid px-4  thanks">
+            </div>
+        </section>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+          <div class="modal-content">
+            <div class="carousel slide" id="carouselExample">
+                <div class="carousel-inner">
+                  <div class="carousel-item active px-4" id="act1">
+                    <img src="public/img/carousel1.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item px-4" id="act2">
+                    <img src="public/img/carousel2.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item px-4" id="act3">
+                    <img src="public/img/carousel3.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item px-4" id="act4">
+                    <img src="public/img/carousel4.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item px-4" id="act5">
+                    <img src="public/img/carousel5.webp" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div id="gif"></div>
+    <div id="overlay" onclick="hideOverlay()">
+        <section id="overlay-contents" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="py-5"></div>
+            <div class="py-3 ds-com"></div>
+            <div class="dear-box">
+                <h3>Arsip</h3>
+            </div>
+            <!-- <button class="btn rounded-pill text-white shadow px-4 py-2" style="background-image: linear-gradient(to bottom right, #beb862, #e0aa3e, #b06831);">Valid for: 1 person</button> -->
+            <p class="mb-0 mt-1 fs-4 fw-light" style="color: #FDF8D3;">Valid for: 1 person</p>
+            <p class="mb-0 mt-1 fs-5 fw-light" style="color: #FDF8D3;">Click anywhere to continue...</p>
+        </section>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+         $(window).scroll(function() {
+        // Navbar background color change
+        if ($(window).scrollTop() > 50) {
+            $('.navbar').css('background-color', 'rgba(55, 55, 55, 0.4)');
+        } else {
+            $('.navbar').css('background-color', 'transparent');
+        }
+
+        // Image Fade-In Animation based on scroll
+        $('img.img-fluid').each(function() {
+            let top_of_element = $(this).offset().top;
+            let bottom_of_element = top_of_element + $(this).outerHeight();
+            let bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+            let top_of_screen = $(window).scrollTop();
+
+            if (bottom_of_screen > top_of_element && top_of_screen < bottom_of_element) {
+                if (!$(this).hasClass('animated')) {
+                    $(this).css({
+                        'transform': 'translateY(0)',
+                        'opacity': '1' 
+                    }).addClass('animated');
+                }
+            } else {
+                $(this).removeClass('animated').css({
+                    'transform': 'translateY(25px)',
+                    'opacity': '0'
+                });
+            }
+        });
+    });
+
+    // Countdown Timer Functionality
+    $(document).ready(function() {
+        let countDownDate = new Date(2023, 11, 9, 18, 0, 0, 0).getTime();
+        let interval = setInterval(function() {
+            let now = new Date().getTime();
+            let distance = countDownDate - now;
+
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            $('#day').text(String(days).padStart(2, '0'));
+            $('#hrs').text(String(hours).padStart(2, '0'));
+            $('#min').text(String(minutes).padStart(2, '0'));
+            $('#sec').text(String(seconds).padStart(2, '0'));
+
+            if (distance < 0) {
+                clearInterval(interval);
+                $('.countdown-timer').text('EXPIRED');
+            }
+        }, 1000);
+    });
+    function act1() {
+        $(".carousel-item").removeClass("active");
+        $("#act1").addClass("active");
+    }
+    function act2() {
+        $(".carousel-item").removeClass("active");
+        $("#act2").addClass("active");
+    }
+    function act3() {
+        $(".carousel-item").removeClass("active");
+        $("#act3").addClass("active");
+    }
+    function act4() {
+        $(".carousel-item").removeClass("active");
+        $("#act4").addClass("active");
+    }
+    function act5() {
+        $(".carousel-item").removeClass("active");
+        $("#act5").addClass("active");
+    }
+    // Audio control functionality
+    let audioElement = document.getElementById("myAudio");
+    let audioControl = document.getElementById("audioControl");
+
+    function hideOverlay() {
+        document.getElementById("overlay").classList.add("d-none");
+        audioElement.play();
+    }
+
+    function toggleAudio() {
+        if (audioElement.paused) {
+            audioElement.play();
+            // You can replace the SVG content here with the play icon
+            audioControl.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M533.6 32.5c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C557.5 113.8 592 180.8 592 256s-34.5 142.2-88.7 186.3c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5C598.5 426.8 640 346.2 640 256s-41.5-170.8-106.4-223.5zM473.1 107c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C475.3 170.7 496 210.9 496 256s-20.7 85.3-53.2 111.8c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5c43.2-35.2 70.9-88.9 70.9-149s-27.7-113.8-70.9-149zm-60.5 74.5c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C393.1 227.6 400 241 400 256s-6.9 28.4-17.7 37.3c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5C434.1 312.9 448 286.1 448 256s-13.9-56.9-35.4-74.5zM159.9 201.9L272 102.3V409.7L159.9 310.1c-4.4-3.9-10.1-6.1-15.9-6.1H56c-4.4 0-8-3.6-8-8V216c0-4.4 3.6-8 8-8h88c5.9 0 11.6-2.2 15.9-6.1zM290.2 32c-7.3 0-14.3 2.7-19.8 7.5L134.9 160H56c-30.9 0-56 25.1-56 56v80c0 30.9 25.1 56 56 56h78.9L270.4 472.5c5.5 4.8 12.5 7.5 19.8 7.5c16.5 0 29.8-13.3 29.8-29.8V61.8C320 45.3 306.7 32 290.2 32z"/></svg>`;
+        } else {
+            audioElement.pause();
+            // You can replace the SVG content here with the pause icon
+            audioControl.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>`;
+        }
+    }
+
+    </script>
+</body>
+</html>
